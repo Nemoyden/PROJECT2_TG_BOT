@@ -13,39 +13,99 @@ Telegram-бот для отслеживания привычек. Позволя
 
 ## Cтруктура
 
-├── README.md
-├── requirements.txt
-├── bot.py - #Главный файл запуска бота
-├── .env
-├── config/
-│   ├── init.py
-│   └── settings.py - # Файл для хранения конфигурации и загрузки переменных окружения
-├── routers/
-│   ├── init.py - # Пустой файл для корректной работы импорта роутеров
-│   ├── commands.py - # Файл с командами бота
-│   ├── handlers/
-│   │   └── specific_handlers.py - # Хэндлеры для кастомных команд и логики FSM
-├── keyboards/
-│   ├── init.py - # Пустой файл для корректной работы импорта клавиатур
-│   ├── builders.py - # Здесь можно реализовать динамические клавиатуры, если потребуется
-│   └── inline.py - # Inline-клавиатура для главного меню
-├── services/
-│   ├── api_client.py - # Взаимодействие с внешним API (мотивационные цитаты) + кэширование
-│   └── storage_service.py - # Работа с локальным хранилищем привычек (JSON-файл)
-├── filters/
-│   ├── init.py - # Пустой файл для корректной работы импорта фильтров
-│   └── admin_filter.py - # Кастомный фильтр для проверки, является ли пользователь админом
-├── middlewares/
-│   ├── init.py - # Пустой файл для корректной работы импорта мидлварей
-│   └── throttling.py - # Мидлварь для антиспама (ограничение частоты сообщений)
-├── utils/
-│   ├── init.py - # Пустой файл для корректной работы импорта утилит
-│   ├── formatters.py - # Здесь можно реализовать функции для форматирования текста, если потребуется
-│   └── logger.py - # Настройка логгера для записи действий бота
-├── states/
-│   └── init.py - # Состояния FSM для добавления привычки
-├── storage/
-│   └── habits.json
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Структура Проекта</title>
+    <style>
+        ul {
+            list-style-type: none;
+            font-family: monospace;
+        }
+        li::before {
+            content: "├── ";
+        }
+        li:last-child::before {
+            content: "└── ";
+        }
+        .nested {
+            margin-left: 20px;
+        }
+        .comment {
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>README.md</li>
+        <li>requirements.txt</li>
+        <li>bot.py <span class="comment"># Главный файл запуска бота</span></li>
+        <li>.env</li>
+        <li>config/
+            <ul class="nested">
+                <li>__init__.py</li>
+                <li>settings.py <span class="comment"># Файл для хранения конфигурации и загрузки переменных окружения</span></li>
+            </ul>
+        </li>
+        <li>routers/
+            <ul class="nested">
+                <li>__init__.py <span class="comment"># Пустой файл для корректной работы импорта роутеров</span></li>
+                <li>commands.py <span class="comment"># Файл с командами бота</span></li>
+                <li>handlers/
+                    <ul class="nested">
+                        <li>specific_handlers.py <span class="comment"># Хэндлеры для кастомных команд и логики FSM</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>keyboards/
+            <ul class="nested">
+                <li>__init__.py <span class="comment"># Пустой файл для корректной работы импорта клавиатур</span></li>
+                <li>builders.py <span class="comment"># Здесь можно реализовать динамические клавиатуры, если потребуется</span></li>
+                <li>inline.py <span class="comment"># Inline-клавиатура для главного меню</span></li>
+            </ul>
+        </li>
+        <li>services/
+            <ul class="nested">
+                <li>api_client.py <span class="comment"># Взаимодействие с внешним API (мотивационные цитаты) + кэширование</span></li>
+                <li>storage_service.py <span class="comment"># Работа с локальным хранилищем привычек (JSON-файл)</span></li>
+            </ul>
+        </li>
+        <li>filters/
+            <ul class="nested">
+                <li>__init__.py <span class="comment"># Пустой файл для корректной работы импорта фильтров</span></li>
+                <li>admin_filter.py <span class="comment"># Кастомный фильтр для проверки, является ли пользователь админом</span></li>
+            </ul>
+        </li>
+        <li>middlewares/
+            <ul class="nested">
+                <li>__init__.py <span class="comment"># Пустой файл для корректной работы импорта мидлварей</span></li>
+                <li>throttling.py <span class="comment"># Мидлварь для антиспама (ограничение частоты сообщений)</span></li>
+            </ul>
+        </li>
+        <li>utils/
+            <ul class="nested">
+                <li>__init__.py <span class="comment"># Пустой файл для корректной работы импорта утилит</span></li>
+                <li>formatters.py <span class="comment"># Здесь можно реализовать функции для форматирования текста, если потребуется</span></li>
+                <li>logger.py <span class="comment"># Настройка логгера для записи действий бота</span></li>
+            </ul>
+        </li>
+        <li>states/
+            <ul class="nested">
+                <li>__init__.py <span class="comment"># Состояния FSM для добавления привычки</span></li>
+            </ul>
+        </li>
+        <li>storage/
+            <ul class="nested">
+                <li>habits.json</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
 
 ## Как запустить
 
