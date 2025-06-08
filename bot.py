@@ -9,7 +9,7 @@ from utils.logger import logger
 
 async def main():
   
-    bot = Bot(token=BOT_TOKEN, parse_mode="HTML")
+    bot = Bot(token=BOT_TOKEN)
     dp = Dispatcher(storage=MemoryStorage())
 
     dp.message.middleware(ThrottlingMiddleware())
@@ -20,5 +20,5 @@ async def main():
     logger.info("Бот запущен")
     await dp.start_polling(bot)
 
-if name == "__main__":
+if __name__ == "__main__":
     asyncio.run(main())
