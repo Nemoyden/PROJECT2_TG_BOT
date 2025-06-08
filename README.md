@@ -13,33 +13,7 @@ Telegram-бот для отслеживания привычек. Позволя
 
 ## Cтруктура
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Структура Проекта</title>
-    <style>
-        ul {
-            list-style-type: none;
-            font-family: monospace;
-        }
-        li::before {
-            content: "├── ";
-        }
-        li:last-child::before {
-            content: "└── ";
-        }
-        .nested {
-            margin-left: 20px;
-        }
-        .comment {
-            color: #555;
-            font-style: italic;
-        }
-    </style>
-</head>
-<body>
-    <ul>
+
         <li>README.md</li>
         <li>requirements.txt</li>
         <li>bot.py <span class="comment"> - # Главный файл запуска бота</span></li>
