@@ -16,7 +16,7 @@ Telegram-бот для отслеживания привычек. Позволя
 <ul>
     <li>README.md</li>
     <li>requirements.txt</li>
-    <li>bot.py <span class="comment"># Главный файл запуска бота</span></li>
+    <li>bot.py <span class="comment">#Главный файл запуска бота</span></li>
     <li>.env</li>
     <li>config/
         <ul class="nested">
